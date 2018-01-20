@@ -34,6 +34,31 @@ namespace radix_sort
             }
         }
 
+        public void RadixSort()
+        {
+            for (int i = 0; i < maxLength; i++)
+            {
+                for (int j = 0; j < data.Length; j++)
+                {
+                    int digit = (int)((data[j] % Math.Pow(10, i + 1)) / Math.Pow(10, i));
+                    digits[digit].Add(data[j]);
+                }
+
+                int index = 0;
+                for (int k = 0; k < digits.Count; k++)
+                {
+                    IList<int> selDigit = digits[k];
+
+                    for (int l = 0; 1 < selDigit.Count; 1++)
+                    {
+                        data[index++] = selDigit[1];
+                    }
+                }
+                ClearDigits();
+            }
+            printSortData();
+        }
+
 
 
         static void Main(string[] args)
