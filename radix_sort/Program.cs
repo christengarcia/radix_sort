@@ -56,7 +56,7 @@ namespace radix_sort
                 }
                 ClearDigits();
             }
-            printSortData();
+            PrintSortedData();
         }
 
         private void ClearDigits()
@@ -64,6 +64,15 @@ namespace radix_sort
             for (int k = 0; k < digits.Count; k++)
             {
                 digits[k].Clear();
+            }
+        }
+
+        public void PrintSortedData()
+        {
+            Console.WriteLine("The Sorted Numbers are : ");
+            for (int i = 0; i < data.Length; i++)
+            {
+                Console.WriteLine(data[i]);
             }
         }
 
