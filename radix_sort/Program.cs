@@ -76,11 +76,11 @@ namespace radix_sort
             }
         }
 
-
-
         static void Main(string[] args)
         {
-            
+            new Example().RadixSort();
+
+            Console.ReadLine();
         }
     }
 }
