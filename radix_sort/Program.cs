@@ -49,7 +49,7 @@ namespace radix_sort
                 {
                     IList<int> selDigit = digits[k];
 
-                    for (int l = 0; 1 < selDigit.Count; 1++)
+                    for (int l = 0; l < selDigit.Count; l++)
                     {
                         data[index++] = selDigit[1];
                     }
